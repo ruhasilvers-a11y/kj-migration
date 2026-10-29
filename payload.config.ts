@@ -1664,6 +1664,7 @@ const postgresPoolMax = Number(process.env.POSTGRES_POOL_MAX || 3);
 
 export default buildConfig({
   secret: requireProductionSecret(),
+  serverURL: process.env.NEXT_PUBLIC_SITE_URL || "https://www.keralajewellers.in",
   routes: {
     admin: ADMIN_PATH,
   },
